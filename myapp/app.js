@@ -11,18 +11,6 @@ var app = express();
 
 // --------db层--------
 // db start
-myConnection = require('express-myconnection');
-let mysql = require('mysql');
-
-dbOptions = {
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  port: 3306,
-  database: 'coolrabbit'
-}
-app.use(myConnection(mysql, dbOptions, 'single'));
-
 // db end
 
 // view engine setup

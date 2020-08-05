@@ -1,19 +1,10 @@
 var express = require('express');
 var router = express.Router();
-let mysql = require('mysql')
 
-// let db = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'root',
-//   password: '',
-//   port: 3306,
-//   database: 'coolrabbit'
-// })
-// db.connect()
-// db.query('select * from user', (err, data) => {
-//   console.log('succ1', data)
-// })
-// db.end()
+let db = require('../config/db')
+const Unity = require('../unity/Unity')
+const r = Unity.send
+
 
 // 获取时间写法
 // let requestTime  = (req, res, next)=>{
@@ -24,19 +15,16 @@ let mysql = require('mysql')
 
 
 /* GET home page. */
+
+// console.log(send())
 router.get('/', function(req, res, next) {
-  req.getConnection((err, conn) => {
+  db.query('select * from user',(err,rows) => {
+    console.log(1)
     if (err) {
-      return next(err)
+      
+      // res.send(r('', 200, 1, 'error'))
     } else {
-      conn.query('select * from user', [], (err,result) => {
-        if (err) {
-          return next (err);
-        } else {
-          console.log(result)
-          res.json(result);
-        }
-      })
+      res.send(rows)
     }
   })
   // console.log('chenggong')
