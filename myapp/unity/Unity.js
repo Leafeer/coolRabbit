@@ -24,4 +24,4 @@ class Unity{
     }
 }
 
-module,exports = new Unity();
+module.exports = new Unity();

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 let db = require('../config/db')
-const Unity = require('../unity/Unity')
+const Unity = require('../unity/Unity').default
 const r = Unity.send
 
 
@@ -16,15 +16,15 @@ const r = Unity.send
 
 /* GET home page. */
 
-// console.log(send())
+console.log(r('', 200, 1, 'error'))
 router.get('/', function(req, res, next) {
   db.query('select * from user',(err,rows) => {
     console.log(1)
     if (err) {
       
-      // res.send(r('', 200, 1, 'error'))
+      res.send(r('', 200, 1, 'error'))
     } else {
-      res.send(rows)
+      res.send(r(rows))
     }
   })
   // console.log('chenggong')
