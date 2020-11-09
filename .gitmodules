@@ -1,0 +1,6 @@
+[submodule "fr-coolRabbit"]
+	path = fr-coolRabbit
+	url = https://github.com/Leafeer/fr-coolRabbit.git
+[submodule "re-coolRabbit"]
+	path = re-coolRabbit
+	url = https://github.com/Leafeer/re-coolRabbit.git
