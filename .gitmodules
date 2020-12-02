@@ -4,3 +4,6 @@
 [submodule "re-coolRabbit"]
 	path = re-coolRabbit
 	url = https://github.com/Leafeer/re-coolRabbit.git
+[submodule "coderabbit"]
+	path = coderabbit
+	url = https://github.com/404N/coderabbit
