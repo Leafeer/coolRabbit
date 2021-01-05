@@ -7,3 +7,6 @@
 [submodule "coderabbit"]
 	path = coderabbit
 	url = https://github.com/404N/coderabbit
+[submodule "coolrabbit_flutter"]
+	path = coolrabbit_flutter
+	url = https://github.com/404N/coolrabbit_flutter
